@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Café Aroma</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+    <header>
+        <h1>Café Aroma</h1>
+<nav>
+    <a href="#inicio">Inicio</a>
+    <a href="#menu">Menú</a>
+    <a href="#contacto">Contacto</a>
+</nav>
+    </header>
+
+    <section class="hero" id="inicio">
+
+    <video autoplay muted loop playsinline class="video-fondo">
+
+        <source src="{{ url_for('static', filename='video/cafe.mp4') }}" type="video/mp4">
+
+    </video>
+
+    <div class="overlay"></div>
+
+    <div class="hero-content">
+
+        <h2>El mejor café para empezar tu día</h2>
+
+        <p>
+            Disfruta bebidas calientes, postres y un ambiente acogedor.
+        </p>
+
+        <button>Ver menú</button>
+    </div>
+    </section>
+
+    <section class="menu" id="menu">
+        <h2>Nuestro Menú</h2>
+
+        <div class="cards">
+            <div class="card">
+                <img src="{{ url_for('static', filename='img/cafeamericano.png') }}">
+                <h3>Café Americano</h3>
+                <p>Café clásico, intenso y aromático.</p>
+                <span>S/ 8.00</span>
+            </div>
+
+            <div class="card">
+                <img src="{{ url_for('static', filename='img/capuccino.png')}}">
+                <h3>Capuccino</h3>
+                <p>Espuma cremosa con sabor suave.</p>
+                <span>S/ 10.00</span>
+            </div>
+
+            <div class="card">
+                <img src="{{ url_for('static', filename='img/cheesecakereal.jpg') }}">
+                <h3>Cheesecake</h3>
+                <p>Postre dulce ideal para acompañar tu café.</p>
+                <span>S/ 12.00</span>
+            </div>
+        </div>
+    </section>
+<section class="reviews">
+
+    <div class="reviews-title">
+
+        <h2>Opiniones de Clientes</h2>
+
+    </div>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>★★★★★</h3>
+
+            <p>
+                El mejor café que probé en Lima. El ambiente es tranquilo y muy acogedor.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>★★★★★</h3>
+
+            <p>
+                Excelente atención y postres deliciosos. Definitivamente volvería otra vez.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+    <section class="contacto" id="contacto">
+        <h2>Contáctanos</h2>
+        <p>📍 Av. Canto Grande, San Juan de Lurigancho, Lima </p>
+        <p>📞 +51 999 888 777</p>
+    </section>
+
+    <footer>
+
+    <p>© 2026 Café Aroma | Síguenos en Instagram y Facebook</p>
+
+</footer>
+
+</body>
+</html>

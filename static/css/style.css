@@ -1,0 +1,168 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f8f1e7;
+    color: #3e2723;
+}
+
+header {
+    background: #5d4037;
+    color: white;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav a {
+    color: white;
+    margin-left: 20px;
+    text-decoration: none;
+}
+
+.hero {
+    position: relative;
+    height: 450px;
+
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    color: white;
+}
+
+.video-fondo {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    z-index: -2;
+}
+
+.overlay {
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0,0,0,0.5);
+
+    z-index: -1;
+}
+
+.hero-content {
+    z-index: 1;
+}
+
+.hero h2 {
+    font-size: 3rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+}
+
+button {
+    background: #3e2723;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.menu {
+    padding: 50px 30px;
+    text-align: center;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: white;
+    width: 250px;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.card span {
+    font-weight: bold;
+    color: #6d4c41;
+}
+
+.contacto {
+    text-align: center;
+    padding: 40px;
+    background: #efebe9;
+}
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+.card {
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+footer {
+    background: #3e2723;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 20px;
+
+    margin-top: 40px;
+}
+.reviews {
+    padding: 60px 20px;
+
+    text-align: center;
+}
+
+.reviews-title {
+    display: inline-block;
+
+    background: #5d4037;
+
+    color: white;
+
+    padding: 12px 35px;
+
+    border-radius: 30px;
+
+    margin-bottom: 40px;
+}
+
+.reviews-title h2 {
+    margin: 0;
+
+    font-size: 2rem;
+}
