@@ -7,14 +7,24 @@
 </head>
 <body>
 
-    <header>
+<header>
+
+    <div class="logo-container">
+
+        <img src="/static/img/Logo.png">
+
         <h1>Café Aroma</h1>
-<nav>
-    <a href="#inicio">Inicio</a>
-    <a href="#menu">Menú</a>
-    <a href="#contacto">Contacto</a>
-</nav>
-    </header>
+
+    </div>
+
+    <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#menu">Menú</a>
+        <a href="#delivery">Delivery</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
+
+</header>
 
     <section class="hero" id="inicio">
 
@@ -63,27 +73,146 @@
                 <span>S/ 12.00</span>
             </div>
             <div class="card">
-    <img src="">
+    <img src="/static/img/crema_volteada.jpg">
     <h3>Crema volteada</h3>
     <p>Tradicional postre casero con suave textura y delicioso caramelo.</p>
     <span>S/ 9.00</span>
 </div>
 
 <div class="card">
-    <img src="">
+    <img src="/static/img/Tiramisu_2.png">
     <h3>Tiramisú</h3>
     <p>Postre italiano elaborado con café, crema y cacao.</p>
     <span>S/ 14.00</span>
 </div>
 
 <div class="card">
-    <img src="">
-    <h3>Croissant</h3>
+    <img src="/static/img/croissant_jamon_queso.jpg">
+    <h3>Croissant de Jamón y Queso</h3>
     <p>Hojaldre crujiente ideal para acompañar cualquier bebida.</p>
     <span>S/ 7.00</span>
 </div>
+<div class="card">
+    <img src="/static/img/caramel_latte.jpg">
+    <h3>Caramel Latte</h3>
+    <p>Suave combinación de café espresso, leche cremosa y caramelo dulce, ideal para quienes buscan una bebida equilibrada y reconfortante.</p>
+    <span>S/ 13.00</span>
+</div>
+<div class="card">
+    <img src="/static/img/matcha_latte.jpg">
+    <h3>Matcha Latte</h3>
+    <p>Bebida preparada con té matcha premium y leche espumosa, ofreciendo un sabor delicado y una experiencia diferente y refrescante.</p>
+    <span>S/ 15.00</span>
+</div>
         </div>
     </section>
+    <section class="delivery" id="delivery">
+    <div class="delivery-title">
+        <h2>Pedido Delivery</h2>
+        <p>Selecciona tus productos favoritos y completa tus datos de pago.</p>
+    </div>
+
+    <div class="delivery-container">
+
+        <div class="delivery-products">
+            <h3>Elige tu pedido</h3>
+
+            <label class="product-option">
+                <input type="checkbox">
+                <span>Café Americano - S/ 8.00</span>
+            </label>
+
+            <label class="product-option">
+                <input type="checkbox">
+                <span>Capuccino - S/ 10.00</span>
+            </label>
+
+            <label class="product-option">
+                <input type="checkbox">
+                <span>Caramel Latte - S/ 13.00</span>
+            </label>
+
+            <label class="product-option">
+                <input type="checkbox">
+                <span>Matcha Latte - S/ 15.00</span>
+            </label>
+
+            <label class="product-option">
+                <input type="checkbox">
+                <span>Brownie - S/ 9.00</span>
+            </label>
+
+            <label class="product-option">
+                <input type="checkbox">
+                <span>Crema Volteada - S/ 8.00</span>
+            </label>
+        </div>
+
+        <div class="payment-box">
+            <h3>Datos de entrega</h3>
+
+            <input type="text" placeholder="Nombre completo">
+            <input type="text" placeholder="Dirección de entrega">
+            <input type="tel" placeholder="Número de celular">
+
+            <h3>Método de pago</h3>
+
+            <select>
+                <option>Yape</option>
+                <option>Plin</option>
+                <option>Tarjeta</option>
+                <option>Efectivo</option>
+            </select>
+
+            <button>Confirmar pedido</button>
+        </div>
+
+    </div>
+</section>
+<section class="horarios">
+    <h2>Horarios de Atención</h2>
+
+    <div class="horario-box">
+        <p><strong>Lunes a Viernes:</strong> 8:00 am - 10:00 pm</p>
+        <p><strong>Sábados:</strong> 9:00 am - 11:00 pm</p>
+        <p><strong>Domingos:</strong> 9:00 am - 8:00 pm</p>
+    </div>
+</section>
+<section class="galeria">
+    <h2>Galería</h2>
+
+    <div class="galeria-grid">
+        <img src="/static/img/cafeteria.jpg">
+        <img src="/static/img/cafeteria2.jpg">
+        <img src="/static/img/cafeteria3.jpg">
+    </div>
+</section>
+<section class="experiencia">
+
+    <h2>Nuestra Experiencia</h2>
+
+    <p>
+        En Café Aroma nos comprometemos a brindar una experiencia única en cada visita.
+        Seleccionamos cuidadosamente nuestros ingredientes para garantizar bebidas y postres
+        de la más alta calidad. Nuestro objetivo es ofrecer un ambiente cálido, acogedor y
+        perfecto para compartir momentos especiales con amigos, familiares o disfrutar de un
+        momento de tranquilidad acompañado de un excelente café.
+    </p>
+
+</section>
+<section class="ubicacion">
+    <h2>Ubicación</h2>
+
+    <p>Visítanos en Av. Los Cafetos 123, Lima.</p>
+
+    <iframe
+        src="https://www.google.com/maps?q=Miraflores%20Lima%20Peru&output=embed"
+        width="100%"
+        height="350"
+        style="border:0;"
+        loading="lazy">
+    </iframe>
+</section>
 <section class="reviews">
 
     <div class="reviews-title">
@@ -109,6 +238,15 @@
                 Excelente atención y postres deliciosos. Definitivamente volvería otra vez.
             </p>
         </div>
+        <div class="opinion-box">
+
+    <h3>Comparte tu experiencia</h3>
+
+    <textarea placeholder="Déjanos tu opinión sobre nuestro café, atención o ambiente..."></textarea>
+
+    <button>Enviar opinión</button>
+
+</div>
 
     </div>
 
