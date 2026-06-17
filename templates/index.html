@@ -17,12 +17,16 @@
 
     </div>
 
-    <nav>
-        <a href="#inicio">Inicio</a>
-        <a href="#menu">Menú</a>
-        <a href="#delivery">Delivery</a>
-        <a href="#contacto">Contacto</a>
-    </nav>
+<nav>
+    <a href="#inicio">Inicio</a>
+    <a href="#menu">Menú</a>
+    <a href="#delivery">Delivery</a>
+    <a href="#contacto">Contacto</a>
+
+    <a href="/dashboard">Administrar Productos</a>
+
+    <a href="/pedidos">Ver Pedidos</a>
+</nav>
 
 </header>
 
@@ -158,24 +162,24 @@
             </label>
         </div>
 
-        <div class="payment-box">
+        <form class="payment-box" action="/pedido" method="POST">
             <h3>Datos de entrega</h3>
 
-            <input type="text" placeholder="Nombre completo">
-            <input type="text" placeholder="Dirección de entrega">
-            <input type="tel" placeholder="Número de celular">
+            <input type="text" name="nombre" placeholder="Nombre completo" required>
+            <input type="text" name="direccion" placeholder="Dirección de entrega" required>
+            <input type="tel" name="celular" placeholder="Número de celular" required>
 
             <h3>Método de pago</h3>
 
-            <select>
+            <select name="pago">
                 <option>Yape</option>
                 <option>Plin</option>
                 <option>Tarjeta</option>
                 <option>Efectivo</option>
             </select>
 
-            <button>Confirmar pedido</button>
-        </div>
+            <button type="submit">Confirmar pedido</button>
+        </form>
 
     </div>
 </section>

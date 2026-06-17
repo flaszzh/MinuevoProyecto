@@ -15,6 +15,14 @@ class Producto(db.Model):
     nombre = db.Column(db.String(100), nullable=False)
     precio = db.Column(db.Float, nullable=False)
 
+class Pedido(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+
+    nombre = db.Column(db.String(100))
+    direccion = db.Column(db.String(200))
+    celular = db.Column(db.String(20))
+    metodo_pago = db.Column(db.String(50))
+
 @app.route("/productos")
 def productos():
     productos = Producto.query.all()
@@ -34,6 +42,16 @@ def dashboard():
         "dashboard.html",
         productos=productos,
         total=len(productos)
+    )
+
+@app.route("/pedidos")
+def pedidos():
+
+    pedidos = Pedido.query.all()
+
+    return render_template(
+        "pedidos.html",
+        pedidos=pedidos
     )
 
 @app.route("/agregar", methods=["GET", "POST"])
@@ -111,6 +129,27 @@ def cargar_productos():
     db.session.commit()
 
     return "Productos cargados correctamente"
+
+@app.route("/pedido", methods=["POST"])
+def pedido():
+
+    nuevo_pedido = Pedido(
+        nombre=request.form["nombre"],
+        direccion=request.form["direccion"],
+        celular=request.form["celular"],
+        metodo_pago=request.form["pago"]
+    )
+
+    db.session.add(nuevo_pedido)
+    db.session.commit()
+
+    return """
+    <h1>Pedido registrado correctamente ☕</h1>
+
+    <p>Gracias por tu compra.</p>
+
+    <a href="/">Volver a Café Aroma</a>
+    """
 
 @app.route("/")
 def inicio():
