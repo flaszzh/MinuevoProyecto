@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard - Café Aroma</title>
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            background:#f8f1e7;
+            margin:0;
+            padding:40px;
+        }
+
+        h1{
+            text-align:center;
+            color:#5d4037;
+        }
+
+        .dashboard{
+            max-width:900px;
+            margin:auto;
+        }
+
+        .card{
+            background:white;
+            padding:20px;
+            border-radius:15px;
+            box-shadow:0 4px 12px rgba(0,0,0,0.15);
+            margin-bottom:30px;
+        }
+
+        table{
+            width:100%;
+            border-collapse:collapse;
+        }
+
+        th{
+            background:#5d4037;
+            color:white;
+            padding:12px;
+        }
+
+        td{
+            padding:12px;
+            border-bottom:1px solid #ddd;
+            text-align:center;
+        }
+
+        .btn{
+            background:#5d4037;
+            color:white;
+            padding:10px 15px;
+            text-decoration:none;
+            border-radius:10px;
+        }
+
+        .btn-eliminar{
+    background:#c0392b;
+    color:white;
+    padding:6px 12px;
+    text-decoration:none;
+    border-radius:8px;
+    font-size:14px;
+}
+
+.btn-editar{
+    background:#2980b9;
+    color:white;
+    padding:6px 12px;
+    text-decoration:none;
+    border-radius:8px;
+    font-size:14px;
+    margin-right:5px;
+}
+    </style>
+</head>
+<body>
+
+<div class="dashboard">
+
+    <h1>Dashboard Café Aroma</h1>
+
+    <div class="card">
+        <h2>Total de productos: {{ total }}</h2>
+
+<p>
+    Sistema de gestión de productos de Café Aroma
+</p>
+    </div>
+
+    <div class="card">
+
+        <div style="display:flex; justify-content:space-between; align-items:center;">
+    <h2>Lista de Productos</h2>
+
+    <a href="/agregar" class="btn">
+        + Agregar Producto
+    </a>
+</div>
+
+        <table>
+<tr>
+    <th>ID</th>
+    <th>Producto</th>
+    <th>Precio</th>
+    <th>Acciones</th>
+</tr>
+
+            {% for producto in productos %}
+<tr>
+    <td>{{ producto.id }}</td>
+    <td>{{ producto.nombre }}</td>
+    <td>S/{{ producto.precio }}</td>
+
+   <td>
+    <a href="/editar/{{ producto.id }}" class="btn-editar">
+        Editar
+    </a>
+
+<a
+href="/eliminar/{{ producto.id }}"
+class="btn-eliminar"
+onclick="return confirm('¿Deseas eliminar este producto?')">
+    Eliminar
+</a>
+</td>
+
+</tr>
+            {% endfor %}
+
+        </table>
+
+    </div>
+
+</div>
+
+</body>
+</html>

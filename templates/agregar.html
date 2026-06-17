@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Agregar Producto</title>
+
+    <style>
+        body{
+            font-family:Arial;
+            background:#f8f1e7;
+            padding:40px;
+        }
+
+        .formulario{
+    max-width:500px;
+    margin:auto;
+    background:white;
+    padding:40px;
+    border-radius:15px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.15);
+}
+
+input{
+    width:100%;
+    padding:12px;
+    margin-bottom:15px;
+    box-sizing:border-box;
+}
+
+button{
+    background:#5d4037;
+    color:white;
+    border:none;
+    padding:12px;
+    width:100%;
+    cursor:pointer;
+    box-sizing:border-box;
+}
+    </style>
+
+</head>
+
+<body>
+
+<div class="formulario">
+
+<h2>Agregar Producto</h2>
+
+<form method="POST">
+
+<input
+type="text"
+name="nombre"
+placeholder="Nombre del producto"
+required>
+
+<input
+type="number"
+name="precio"
+placeholder="Precio"
+required>
+
+<button type="submit">
+Guardar Producto
+</button>
+
+</form>
+
+</div>
+
+</body>
+</html>
