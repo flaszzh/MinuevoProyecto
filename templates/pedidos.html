@@ -49,6 +49,8 @@
 <tr>
     <th>ID</th>
     <th>Cliente</th>
+    <th>Producto</th>
+    <th>Total</th>
     <th>Dirección</th>
     <th>Celular</th>
     <th>Pago</th>
@@ -59,6 +61,8 @@
 <tr>
     <td>{{ pedido.id }}</td>
     <td>{{ pedido.nombre }}</td>
+    <td>{{ pedido.producto }}</td>
+    <td>S/{{ pedido.total }}</td>
     <td>{{ pedido.direccion }}</td>
     <td>{{ pedido.celular }}</td>
     <td>{{ pedido.metodo_pago }}</td>

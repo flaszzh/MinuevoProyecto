@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Login - Café Aroma</title>
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial, sans-serif;
+        }
+
+        body{
+            background:#f5ebe0;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            height:100vh;
+        }
+
+        .login-box{
+            background:white;
+            width:400px;
+            padding:40px;
+            border-radius:20px;
+            box-shadow:0 8px 20px rgba(0,0,0,0.2);
+            text-align:center;
+        }
+
+        .login-box h1{
+            color:#5d4037;
+            margin-bottom:10px;
+        }
+
+        .login-box p{
+            color:#777;
+            margin-bottom:25px;
+        }
+
+        .login-box input{
+            width:100%;
+            padding:12px;
+            margin-bottom:15px;
+            border:1px solid #ccc;
+            border-radius:10px;
+            font-size:15px;
+        }
+
+        .login-box button{
+            width:100%;
+            background:#5d4037;
+            color:white;
+            border:none;
+            padding:12px;
+            border-radius:10px;
+            cursor:pointer;
+            font-size:16px;
+        }
+
+        .login-box button:hover{
+            background:#4a322c;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<div class="login-box">
+
+    <h1>☕ Café Aroma</h1>
+
+    <p>Acceso Administrativo</p>
+
+    <form method="POST">
+
+        <input
+            type="text"
+            name="usuario"
+            placeholder="Usuario"
+            required
+        >
+
+        <input
+            type="password"
+            name="password"
+            placeholder="Contraseña"
+            required
+        >
+
+        <button type="submit">
+            Iniciar Sesión
+        </button>
+
+    </form>
+
+</div>
+
+</body>
+</html>

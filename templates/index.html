@@ -23,9 +23,6 @@
     <a href="#delivery">Delivery</a>
     <a href="#contacto">Contacto</a>
 
-    <a href="/dashboard">Administrar Productos</a>
-
-    <a href="/pedidos">Ver Pedidos</a>
 </nav>
 
 </header>
@@ -118,56 +115,25 @@
 
     <div class="delivery-container">
 
-        <div class="delivery-products">
-            <h3>Elige tu pedido</h3>
-
-            <label class="product-option">
-                <input type="checkbox">
-                <span>Café Americano - S/ 8.00</span>
-            </label>
-
-            <label class="product-option">
-                <input type="checkbox">
-                <span>Capuccino - S/ 10.00</span>
-            </label>
-            
-            <label class="product-option">
-                <input type="checkbox">
-                <span>Cheesecake - S/ 12.00</span>
-            </label>
-
-            <label class="product-option">
-                <input type="checkbox">
-                <span>Tiramisú - S/ 14.00</span>
-            </label>
-
-            <label class="product-option">
-                <input type="checkbox">
-                <span>Caramel Latte - S/ 13.00</span>
-            </label>
-
-            <label class="product-option">
-                <input type="checkbox">
-                <span>Matcha Latte - S/ 15.00</span>
-            </label>
-
-            <label class="product-option">
-                <input type="checkbox">
-                <span>Croissant de Jamón y queso - S/ 7.00</span>
-            </label>
-
-            <label class="product-option">
-                <input type="checkbox">
-                <span>Crema Volteada - S/ 8.00</span>
-            </label>
-        </div>
-
         <form class="payment-box" action="/pedido" method="POST">
             <h3>Datos de entrega</h3>
 
             <input type="text" name="nombre" placeholder="Nombre completo" required>
             <input type="text" name="direccion" placeholder="Dirección de entrega" required>
             <input type="tel" name="celular" placeholder="Número de celular" required>
+
+            <h3>Producto</h3>
+
+         <select name="producto" required>
+           <option value="Café Americano|8">Café Americano - S/ 8.00</option>
+           <option value="Capuccino|10">Capuccino - S/ 10.00</option>
+           <option value="Cheesecake|12">Cheesecake - S/ 12.00</option>
+           <option value="Crema Volteada|9">Crema Volteada - S/ 9.00</option>
+           <option value="Tiramisú|14">Tiramisú - S/ 14.00</option>
+           <option value="Croissant de Jamón y Queso|7">Croissant de Jamón y Queso - S/ 7.00</option>
+           <option value="Caramel Latte|13">Caramel Latte - S/ 13.00</option>
+           <option value="Matcha Latte|15">Matcha Latte - S/ 15.00</option>
+         </select>
 
             <h3>Método de pago</h3>
 
@@ -268,7 +234,7 @@
 
     <section class="contacto" id="contacto">
         <h2>Contáctanos</h2>
-        <p>📍 Av. Canto Grande, San Juan de Lurigancho, Lima </p>
+        <p>📍 Miraflores 181 Av Los cafetos, Lima </p>
         <p>📞 +51 999 888 777</p>
     </section>
 

@@ -79,19 +79,95 @@
 
     <h1>Dashboard Café Aroma</h1>
 
-    <div style="margin-bottom:20px;">
+<div style="margin-bottom:20px;">
+
     <a href="/pedidos" class="btn">
         Ver Pedidos
     </a>
+
+    <div style="margin-top:15px;">
+        <a href="/logout" class="btn-eliminar">
+            Cerrar Sesión
+        </a>
+    </div>
+
 </div>
 
-    <div class="card">
-        <h2>Total de productos: {{ total }}</h2>
+<div style="
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:20px;
+margin-bottom:30px;
+">
 
-<p>
-    Sistema de gestión de productos de Café Aroma
-</p>
-    </div>
+<div class="card">
+    <h2>{{ total }}</h2>
+    <p>Productos Registrados</p>
+</div>
+
+<div class="card">
+    <h2>{{ total_pedidos }}</h2>
+    <p>Pedidos Registrados</p>
+</div>
+
+<div class="card">
+    <h2>S/{{ ventas_totales }}</h2>
+    <p>Ventas Totales</p>
+</div>
+
+<div class="card">
+
+    <h2>Meta de Ventas</h2>
+
+    <p>
+        Ventas actuales:
+        <strong>S/{{ ventas_totales }}</strong>
+    </p>
+
+    <p>
+        Meta mensual:
+        <strong>S/{{ meta_mensual }}</strong>
+    </p>
+
+    <p>
+        Avance:
+        <strong>{{ porcentaje_meta }}%</strong>
+    </p>
+
+</div>
+
+<div class="card">
+
+    <h2>Últimos Pedidos</h2>
+
+    <table>
+
+        <tr>
+            <th>Cliente</th>
+            <th>Producto</th>
+            <th>Total</th>
+        </tr>
+
+        {% for pedido in ultimos_pedidos %}
+
+        <tr>
+            <td>{{ pedido.nombre }}</td>
+            <td>{{ pedido.producto }}</td>
+            <td>S/{{ pedido.total }}</td>
+        </tr>
+
+        {% endfor %}
+
+    </table>
+
+</div>
+
+<div class="card">
+    <h2>S/{{ ticket_promedio }}</h2>
+    <p>Ticket Promedio</p>
+</div>
+
+</div>
 
     <div class="card">
 
